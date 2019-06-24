@@ -15,16 +15,16 @@ public interface ConfigService {
 	
 	@GET
 	@Produces({ "application/json", "application/xml" })
-	public Config get(@QueryParam("key") String key);
+	public Config get(Config config);
 
 	@DELETE
 	@Consumes({ "application/json", "application/xml" })
 	@Produces({ "application/json", "application/xml" })
-	public Config remove(@QueryParam("key") String key);
+	public Config remove(Config config);
 	
 	@POST
 	@Consumes({ "application/json", "application/xml" })
 	@Produces({ "application/json", "application/xml" })
-	public void add(@QueryParam("key") String key, @QueryParam("value") Object value);
+	public Config add(Config config);
 	
 }

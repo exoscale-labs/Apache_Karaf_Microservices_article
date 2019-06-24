@@ -2,12 +2,11 @@ package com.exoscale.carassembly.body.assembly.services;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferenceCardinality;
-import org.osgi.service.component.annotations.ReferencePolicy;
 
 import com.exoscale.carassembly.config.api.ConfigService;
+import com.exoscale.carassembly.config.api.model.Config;
 
-@Component
+@Component(service=BodyAssembly.class)
 public class BodyAssembly {
 
 	private ConfigService configService;
@@ -25,14 +24,15 @@ public class BodyAssembly {
 		// TODO Auto-generated method stub
 	}
 
-	@Reference(name = "config", service = ConfigService.class, cardinality = ReferenceCardinality.MANDATORY, policy = ReferencePolicy.STATIC, unbind = "unbindConfigService")
-	public void bindConfigService(ConfigService config) {
-		System.out.println("Config bound: " + config);
-		this.configService = config;
+	@Reference
+	public void bindConfigService(ConfigService configService) {
+		System.out.println("Config bound: " + configService);
+		this.configService = configService;
+		Config config = new Config();
+		config.setKey("color");
+		config.setValue("green");
+		configService.add(config);
 	}
 
-	public void unbindConfigService(ConfigService config) {
-		this.configService = null;
-	}
 
 }

@@ -41,7 +41,6 @@
 			<artifactId>cxf-rt-rs-service-description</artifactId>
 			<version>${cxf.version}</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -53,8 +52,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Export-Package>com.exoscale.carassembly.config.api</Export-Package>
-						<Export-Package>com.exoscale.carassembly.config.api.model</Export-Package>
+						<Export-Package>com.exoscale.carassembly.config.api.*</Export-Package>
 					</instructions>
 				</configuration>
 			</plugin>

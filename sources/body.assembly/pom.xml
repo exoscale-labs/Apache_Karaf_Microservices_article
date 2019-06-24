@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.exoscale.carassembly</groupId>
-	<artifactId>body.hood</artifactId>
+	<artifactId>body.assembly</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	<name>Car body assembly</name>
@@ -44,7 +44,11 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<_include>META-INF/MANIFEST.MF</_include>
+				<!--		<_include>META-INF/MANIFEST.MF</_include> -->
+						<Import-Package>com.exoscale.carassembly.config.api,
+						com.exoscale.carassembly.config.api.model
+						</Import-Package>
+<!-- 						<Import-Package>com.exoscale.carassembly.body.hood</Import-Package> -->
 						<Export-Package>com.exoscale.carassembly.body.assembly</Export-Package>
 					</instructions>
 				</configuration>

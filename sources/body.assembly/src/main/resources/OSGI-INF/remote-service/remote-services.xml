@@ -5,6 +5,7 @@
     <property name="service.exported.interfaces">*</property>
     <property name="service.exported.configs">org.apache.cxf.rs</property>
     <property name="service.exported.intents">HTTP</property>
-    <property name="org.apache.cxf.rs.address">http://localhost:9001/config</property>
+    <property name="org.apache.cxf.rs.provider">org.codehaus.jackson.jaxrs.JacksonJsonProvider</property>
+    <property name="org.apache.cxf.rs.address">http://localhost:9991/cxf/api</property>
   </service-description>
 </service-descriptions>

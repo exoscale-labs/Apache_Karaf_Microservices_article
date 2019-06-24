@@ -36,7 +36,6 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Import-Package>com.exoscale.carassembly.config.api</Import-Package>
 						<Export-Package>com.exoscale.carassembly.body.hood</Export-Package>
 					</instructions>
 				</configuration>
