@@ -14,13 +14,14 @@ import com.exoscale.carassembly.config.api.model.Config;
 public interface ConfigService {
 	
 	@GET
+	@Consumes({ "application/json", "application/xml" })
 	@Produces({ "application/json", "application/xml" })
-	public Config get(Config config);
+	public Config get(@QueryParam("key") String key);
 
 	@DELETE
 	@Consumes({ "application/json", "application/xml" })
 	@Produces({ "application/json", "application/xml" })
-	public Config remove(Config config);
+	public Config remove(@QueryParam("key") String key);
 	
 	@POST
 	@Consumes({ "application/json", "application/xml" })

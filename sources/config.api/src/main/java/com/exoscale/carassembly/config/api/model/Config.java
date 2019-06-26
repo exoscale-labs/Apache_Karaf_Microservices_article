@@ -1,7 +1,7 @@
 package com.exoscale.carassembly.config.api.model;
 
 public class Config {
-
+	
 	private String key;
 	
 	private Object value;
